@@ -172,10 +172,13 @@ export default function LandingPage() {
                             </div>
                         </div>
                         <div className="bg-white p-2 rounded-2xl shadow-xl border border-gray-200">
-                            {/* Placeholder for Udimi Interface Screenshot */}
-                            <div className="bg-gray-100 aspect-[4/3] rounded-xl flex items-center justify-center text-gray-400">
-                                <span className="font-medium">Udimi Interface / Filter Screenshot</span>
-                            </div>
+                            <Image
+                                src="/udimi interface.png"
+                                alt="Udimi Interface displaying advanced filtering options"
+                                width={800}
+                                height={600}
+                                className="w-full h-auto rounded-xl"
+                            />
                         </div>
                     </div>
                 </div>
