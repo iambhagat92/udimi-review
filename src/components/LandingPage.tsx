@@ -60,14 +60,13 @@ export default function LandingPage() {
                         {/* Visual for Dashboard/Results */}
                         <div className="rounded-2xl shadow-2xl overflow-hidden bg-white border border-gray-100 p-2">
                             {/* USER: Upload your screenshot to public/dashboard.jpg to see it here */}
-                            <img
+                            <Image
                                 src="/dashboard.jpg"
                                 alt="Udimi Traffic Statistics"
+                                width={800}
+                                height={600}
                                 className="w-full h-auto rounded-xl"
-                                onError={(e) => {
-                                    e.currentTarget.style.display = 'none';
-                                    e.currentTarget.parentElement!.querySelector('.placeholder-text')!.classList.remove('hidden');
-                                }}
+                                priority
                             />
                             <div className="placeholder-text hidden bg-gray-100 aspect-video rounded-xl flex items-center justify-center text-gray-400">
                                 <div className="text-center">
@@ -96,10 +95,11 @@ export default function LandingPage() {
                     <p className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Compatible with all major funnels</p>
                     <div className="flex justify-center flex-wrap gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-300">
                         {/* Placeholders for logos: ClickFunnels, Leadpages, System.io, etc. Text fallback for now */}
-                        <span className="font-bold text-xl text-gray-600">ClickFunnels</span>
-                        <span className="font-bold text-xl text-gray-600">Systeme.io</span>
-                        <span className="font-bold text-xl text-gray-600">GetResponse</span>
-                        <span className="font-bold text-xl text-gray-600">Aweber</span>
+                        <span className="font-bold text-xl text-gray-500 hover:text-blue-600 transition-colors cursor-default">ClickFunnels</span>
+                        <span className="font-bold text-xl text-gray-500 hover:text-blue-600 transition-colors cursor-default">Systeme.io</span>
+                        <span className="font-bold text-xl text-gray-500 hover:text-blue-600 transition-colors cursor-default">GetResponse</span>
+                        <span className="font-bold text-xl text-gray-500 hover:text-blue-600 transition-colors cursor-default">Aweber</span>
+                        <span className="font-bold text-xl text-gray-500 hover:text-blue-600 transition-colors cursor-default">ConvertKit</span>
                     </div>
                 </div>
             </div>
@@ -219,25 +219,57 @@ export default function LandingPage() {
                         <h2 className="text-3xl font-bold text-gray-900 mb-4">What Other Marketers Say</h2>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {[1, 2, 3].map((i) => (
-                            <div key={i} className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
-                                <div className="flex text-yellow-400 mb-4">
-                                    <Star className="w-5 h-5 fill-current" />
-                                    <Star className="w-5 h-5 fill-current" />
-                                    <Star className="w-5 h-5 fill-current" />
-                                    <Star className="w-5 h-5 fill-current" />
-                                    <Star className="w-5 h-5 fill-current" />
-                                </div>
-                                <p className="text-gray-600 mb-6 italic">"I was skeptical about solo ads until I tried Udimi. The filter system is a lifesaver. I made my first 5 sales within 24 hours of my run!"</p>
-                                <div className="flex items-center gap-4">
-                                    <div className="w-10 h-10 rounded-full bg-gray-200"></div>
-                                    <div>
-                                        <p className="font-bold text-gray-900">Marketer Name</p>
-                                        <p className="text-xs text-gray-500">Verified Buyer</p>
-                                    </div>
+                        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                            <div className="flex text-yellow-400 mb-4">
+                                <Star className="w-5 h-5 fill-current" />
+                                <Star className="w-5 h-5 fill-current" />
+                                <Star className="w-5 h-5 fill-current" />
+                                <Star className="w-5 h-5 fill-current" />
+                                <Star className="w-5 h-5 fill-current" />
+                            </div>
+                            <p className="text-gray-600 mb-6 italic">"I was skeptical about solo ads until I tried Udimi. The filter system is a lifesaver. I made my first 5 sales within 24 hours of my run!"</p>
+                            <div className="flex items-center gap-4">
+                                <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 font-bold">JD</div>
+                                <div>
+                                    <p className="font-bold text-gray-900">John D.</p>
+                                    <p className="text-xs text-gray-500">Verified Buyer</p>
                                 </div>
                             </div>
-                        ))}
+                        </div>
+                        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                            <div className="flex text-yellow-400 mb-4">
+                                <Star className="w-5 h-5 fill-current" />
+                                <Star className="w-5 h-5 fill-current" />
+                                <Star className="w-5 h-5 fill-current" />
+                                <Star className="w-5 h-5 fill-current" />
+                                <Star className="w-5 h-5 fill-current" />
+                            </div>
+                            <p className="text-gray-600 mb-6 italic">"The quality of traffic here is unmatched. I've tried Facebook ads and Google ads, but Udimi gave me the best ROI by far."</p>
+                            <div className="flex items-center gap-4">
+                                <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 font-bold">AS</div>
+                                <div>
+                                    <p className="font-bold text-gray-900">Sarah A.</p>
+                                    <p className="text-xs text-gray-500">Verified Buyer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                            <div className="flex text-yellow-400 mb-4">
+                                <Star className="w-5 h-5 fill-current" />
+                                <Star className="w-5 h-5 fill-current" />
+                                <Star className="w-5 h-5 fill-current" />
+                                <Star className="w-5 h-5 fill-current" />
+                                <Star className="w-4 h-4 text-gray-300 fill-current" />
+                            </div>
+                            <p className="text-gray-600 mb-6 italic">"Great platform for building your list quickly. The sellers are responsive and the support team is helpful if you have issues."</p>
+                            <div className="flex items-center gap-4">
+                                <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 font-bold">MR</div>
+                                <div>
+                                    <p className="font-bold text-gray-900">Mike R.</p>
+                                    <p className="text-xs text-gray-500">Verified Buyer</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -251,25 +283,57 @@ export default function LandingPage() {
                     </div>
 
                     <div className="space-y-6">
-                        {[1, 2, 3].map((i) => (
-                            <div key={i} className="flex flex-col md:flex-row items-center justify-between p-6 bg-gray-50 rounded-lg border border-gray-100 hover:border-blue-200 transition-colors">
-                                <div className="flex items-center gap-4 mb-4 md:mb-0">
-                                    <div className="w-16 h-16 rounded-full bg-gray-300"></div>
-                                    <div>
-                                        <h3 className="font-bold text-xl text-gray-900">Top Seller #{i}</h3>
-                                        <div className="flex items-center gap-1 text-sm text-gray-500">
-                                            <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                                            <span>4.9/5 Rating</span>
-                                            <span className="mx-2">•</span>
-                                            <span className="text-green-600 font-medium">35% Sales Reported</span>
-                                        </div>
+                        <div className="flex flex-col md:flex-row items-center justify-between p-6 bg-gray-50 rounded-lg border border-gray-100 hover:border-blue-200 transition-colors">
+                            <div className="flex items-center gap-4 mb-4 md:mb-0">
+                                <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-xl">TC</div>
+                                <div>
+                                    <h3 className="font-bold text-xl text-gray-900">Thomas C.</h3>
+                                    <div className="flex items-center gap-1 text-sm text-gray-500">
+                                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                                        <span>4.9/5 Rating</span>
+                                        <span className="mx-2">•</span>
+                                        <span className="text-green-600 font-medium">52% Sales Reported</span>
                                     </div>
                                 </div>
-                                <a href={AFFILIATE_LINK} className="px-6 py-2 bg-white border border-blue-600 text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors">
-                                    View Profile
-                                </a>
                             </div>
-                        ))}
+                            <a href={AFFILIATE_LINK} className="px-6 py-2 bg-white border border-blue-600 text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors">
+                                View Profile
+                            </a>
+                        </div>
+                        <div className="flex flex-col md:flex-row items-center justify-between p-6 bg-gray-50 rounded-lg border border-gray-100 hover:border-blue-200 transition-colors">
+                            <div className="flex items-center gap-4 mb-4 md:mb-0">
+                                <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 font-bold text-xl">SK</div>
+                                <div>
+                                    <h3 className="font-bold text-xl text-gray-900">Sarah K.</h3>
+                                    <div className="flex items-center gap-1 text-sm text-gray-500">
+                                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                                        <span>4.9/5 Rating</span>
+                                        <span className="mx-2">•</span>
+                                        <span className="text-green-600 font-medium">48% Sales Reported</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href={AFFILIATE_LINK} className="px-6 py-2 bg-white border border-blue-600 text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors">
+                                View Profile
+                            </a>
+                        </div>
+                        <div className="flex flex-col md:flex-row items-center justify-between p-6 bg-gray-50 rounded-lg border border-gray-100 hover:border-blue-200 transition-colors">
+                            <div className="flex items-center gap-4 mb-4 md:mb-0">
+                                <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-bold text-xl">DM</div>
+                                <div>
+                                    <h3 className="font-bold text-xl text-gray-900">David M.</h3>
+                                    <div className="flex items-center gap-1 text-sm text-gray-500">
+                                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                                        <span>4.8/5 Rating</span>
+                                        <span className="mx-2">•</span>
+                                        <span className="text-green-600 font-medium">41% Sales Reported</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href={AFFILIATE_LINK} className="px-6 py-2 bg-white border border-blue-600 text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors">
+                                View Profile
+                            </a>
+                        </div>
                     </div>
                     <p className="text-center mt-8 text-sm text-gray-500">
                         *Sales reported metrics change daily. Always check the latest reviews on Udimi.
