@@ -1,9 +1,7 @@
 import type { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
-    const baseUrl = process.env.VERCEL_URL
-        ? `https://${process.env.VERCEL_URL}`
-        : 'https://udimi-review.vercel.app';
+    const baseUrl = 'https://udimi-review.vercel.app';
 
     return {
         rules: {
