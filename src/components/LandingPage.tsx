@@ -288,9 +288,9 @@ export default function LandingPage() {
                     <div className="space-y-6">
                         <div className="flex flex-col md:flex-row items-center justify-between p-6 bg-gray-50 rounded-lg border border-gray-100 hover:border-blue-200 transition-colors">
                             <div className="flex items-center gap-4 mb-4 md:mb-0">
-                                <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-xl">TC</div>
+                                <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-xl">GF</div>
                                 <div>
-                                    <h3 className="font-bold text-xl text-gray-900">Thomas C.</h3>
+                                    <h3 className="font-bold text-xl text-gray-900">Glenn Fedor</h3>
                                     <div className="flex items-center gap-1 text-sm text-gray-500">
                                         <Star className="w-4 h-4 text-yellow-400 fill-current" />
                                         <span>4.9/5 Rating</span>
@@ -299,15 +299,15 @@ export default function LandingPage() {
                                     </div>
                                 </div>
                             </div>
-                            <a href={AFFILIATE_LINK} className="px-6 py-2 bg-white border border-blue-600 text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors">
+                            <a href="https://udimi.com/p/n489d" target="_blank" rel="noopener noreferrer" className="px-6 py-2 bg-white border border-blue-600 text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors">
                                 View Profile
                             </a>
                         </div>
                         <div className="flex flex-col md:flex-row items-center justify-between p-6 bg-gray-50 rounded-lg border border-gray-100 hover:border-blue-200 transition-colors">
                             <div className="flex items-center gap-4 mb-4 md:mb-0">
-                                <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 font-bold text-xl">SK</div>
+                                <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 font-bold text-xl">IS</div>
                                 <div>
-                                    <h3 className="font-bold text-xl text-gray-900">Sarah K.</h3>
+                                    <h3 className="font-bold text-xl text-gray-900">Indulis Staskevics</h3>
                                     <div className="flex items-center gap-1 text-sm text-gray-500">
                                         <Star className="w-4 h-4 text-yellow-400 fill-current" />
                                         <span>4.9/5 Rating</span>
@@ -316,15 +316,15 @@ export default function LandingPage() {
                                     </div>
                                 </div>
                             </div>
-                            <a href={AFFILIATE_LINK} className="px-6 py-2 bg-white border border-blue-600 text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors">
+                            <a href="https://udimi.com/p/indulis_targeted_traffic" target="_blank" rel="noopener noreferrer" className="px-6 py-2 bg-white border border-blue-600 text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors">
                                 View Profile
                             </a>
                         </div>
                         <div className="flex flex-col md:flex-row items-center justify-between p-6 bg-gray-50 rounded-lg border border-gray-100 hover:border-blue-200 transition-colors">
                             <div className="flex items-center gap-4 mb-4 md:mb-0">
-                                <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-bold text-xl">DM</div>
+                                <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-bold text-xl">TF</div>
                                 <div>
-                                    <h3 className="font-bold text-xl text-gray-900">David M.</h3>
+                                    <h3 className="font-bold text-xl text-gray-900">Thomas Freeman</h3>
                                     <div className="flex items-center gap-1 text-sm text-gray-500">
                                         <Star className="w-4 h-4 text-yellow-400 fill-current" />
                                         <span>4.8/5 Rating</span>
@@ -333,7 +333,7 @@ export default function LandingPage() {
                                     </div>
                                 </div>
                             </div>
-                            <a href={AFFILIATE_LINK} className="px-6 py-2 bg-white border border-blue-600 text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors">
+                            <a href="https://udimi.com/p/buysoloadsfromproovensource" target="_blank" rel="noopener noreferrer" className="px-6 py-2 bg-white border border-blue-600 text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors">
                                 View Profile
                             </a>
                         </div>
