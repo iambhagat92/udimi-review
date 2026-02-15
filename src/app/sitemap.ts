@@ -1,13 +1,17 @@
 import type { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
+    const baseUrl = process.env.VERCEL_URL
+        ? `https://${process.env.VERCEL_URL}`
+        : 'https://udimi-review-2026.vercel.app';
+
     return [
         {
-            url: 'https://udimi-review-2026.vercel.app',
+            url: baseUrl,
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 1,
-            images: ['https://udimi-review-2026.vercel.app/dashboard.jpg', 'https://udimi-review-2026.vercel.app/udimi interface.png'],
+            images: [`${baseUrl}/dashboard.jpg`, `${baseUrl}/udimi interface.png`],
         },
     ]
 }
