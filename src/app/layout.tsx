@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Udimi Review 2026: The Only Place I Trust for Buying Solo Ads",
   description: "Stop burning budget on bot traffic. See my real results and get a $5 discount on your first Udimi order. Verified vendor list inside.",
+  verification: {
+    google: "l-g4wLIKrROeA-nAcZkmIL8xWnkfLB_3LQeGM6juwAo",
+  },
   openGraph: {
     title: "Udimi Review 2026: The Only Place I Trust for Buying Solo Ads",
     description: "Stop burning budget on bot traffic. See my real results and get a $5 discount on your first Udimi order.",
