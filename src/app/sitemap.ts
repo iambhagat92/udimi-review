@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 1,
+            images: ['https://udimi-review-2026.vercel.app/dashboard.jpg', 'https://udimi-review-2026.vercel.app/udimi interface.png'],
         },
     ]
 }
