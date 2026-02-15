@@ -57,11 +57,22 @@ export default function LandingPage() {
                     </div>
                     <div className="relative">
                         {/* Visual Placeholder for Dashboard/Results */}
+                        {/* Visual for Dashboard/Results */}
                         <div className="rounded-2xl shadow-2xl overflow-hidden bg-white border border-gray-100 p-2">
-                            <div className="bg-gray-100 aspect-video rounded-xl flex items-center justify-center text-gray-400">
+                            {/* USER: Upload your screenshot to public/dashboard.jpg to see it here */}
+                            <img
+                                src="/dashboard.jpg"
+                                alt="Udimi Traffic Statistics"
+                                className="w-full h-auto rounded-xl"
+                                onError={(e) => {
+                                    e.currentTarget.style.display = 'none';
+                                    e.currentTarget.parentElement!.querySelector('.placeholder-text')!.classList.remove('hidden');
+                                }}
+                            />
+                            <div className="placeholder-text hidden bg-gray-100 aspect-video rounded-xl flex items-center justify-center text-gray-400">
                                 <div className="text-center">
                                     <TrendingUp className="w-16 h-16 mx-auto mb-2 opacity-50" />
-                                    <span className="font-medium">Dashboard Screenshot Placeholder</span>
+                                    <span className="font-medium">Upload "dashboard.jpg" to public folder</span>
                                 </div>
                             </div>
                         </div>
